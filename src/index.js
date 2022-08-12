@@ -7,12 +7,13 @@ module.exports = function toReadable (number) {
   if(number <= 19) {
   return Nums[number];
   }
+  else if(number < 100 && number % 10 === 0){
+  return `${Dozens[numberArr[0] - 2]}`;
+  }
   else if( number >= 20 && number <= 99 ){
   return `${Dozens[numberArr[0] - 2]} ${Nums[numberArr[1]]}`;
   }
-  else if(number < 100 && number % 10 === 0){
-  return `${Dozens[numberArr[number]]}`;
-  }
+ 
   else if (number % 100 === 0) {
   return `${Nums[numberArr[0]]} ${h}`;
   }
